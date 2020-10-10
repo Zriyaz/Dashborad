@@ -4,6 +4,12 @@ import { PieChart, Pie, Sector, Cell, Tooltip, Label } from 'recharts';
 
 import { makeStyles } from '@material-ui/styles';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ScheduleIcon from '@material-ui/icons/Schedule';
+import SnoozeIcon from '@material-ui/icons/Snooze';
+import StorageIcon from '@material-ui/icons/Storage';
+import TimelineIcon from '@material-ui/icons/Timeline';
+import BugReportIcon from '@material-ui/icons/BugReport';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -44,6 +50,13 @@ const useStyles = makeStyles((theme) => ({
   subContainer: {
     maxWidth: '50em',
   },
+  mainContainer: {
+    marginTop: '1em',
+  },
+  heading: {
+    fontWeight: 'bold',
+    fontSize: 'medium',
+  },
 }));
 const BusinessImpact = () => {
   const classes = useStyles();
@@ -58,7 +71,9 @@ const BusinessImpact = () => {
           lg={3}>
           <Grid item container direction='row' lg>
             <Grid item>
-              <Typography variant='h5'>Data Quality Index</Typography>
+              <Typography variant='h5' className={classes.heading}>
+                Business Impact
+              </Typography>
             </Grid>
             <Grid
               item
@@ -78,39 +93,10 @@ const BusinessImpact = () => {
             </Grid>
           </Grid>
           <Grid item container justify='flex-start'>
-            <Grid item>
-              <PieChart width={800} height={400}>
-                <Pie
-                  data={data}
-                  cx={300}
-                  cy={150}
-                  innerRadius={60}
-                  outerRadius={70}
-                  fill='#8884d8'
-                  paddingAngle={2}>
-                  <Label
-                    value='Currently'
-                    position='centerBottom'
-                    className='label-top'
-                    fontSize='27px'
-                  />
-                  <Label value='75' position='centerTop' className='label' />
-
-                  {data.map((entry, index) => (
-                    <Cell fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </Grid>
+            Hello
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          direction='column'
-          //className={classes.subContainer}
-          lg>
+        <Grid item container direction='column' lg>
           <Grid
             item
             container
@@ -118,7 +104,9 @@ const BusinessImpact = () => {
             style={{ marginBottom: '0.5em' }}
             lg>
             <Grid item>
-              <Typography variant='h5'>Top Errors</Typography>
+              <Typography variant='h5' className={classes.heading}>
+                Highest Business Impact
+              </Typography>
             </Grid>
             <Grid
               item
@@ -149,7 +137,7 @@ const BusinessImpact = () => {
                     <Typography
                       variant='body2'
                       style={{ fontSize: '0.8em', fontWeight: 'bold' }}>
-                      Premuim less hen zero
+                      Premuim less then zero
                     </Typography>
                   </Grid>
                   <Grid item>
@@ -162,7 +150,7 @@ const BusinessImpact = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -176,11 +164,11 @@ const BusinessImpact = () => {
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  $1500.00
                 </Typography>
               </Grid>
             </Grid>
@@ -195,7 +183,7 @@ const BusinessImpact = () => {
                     <Typography
                       variant='body2'
                       style={{ fontSize: '0.8em', fontWeight: 'bold' }}>
-                      Sum insure less then zero
+                      Sum insure tless then zero
                     </Typography>
                   </Grid>
                   <Grid item>
@@ -208,7 +196,7 @@ const BusinessImpact = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -222,11 +210,11 @@ const BusinessImpact = () => {
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  $1500.00
                 </Typography>
               </Grid>
             </Grid>
@@ -236,7 +224,7 @@ const BusinessImpact = () => {
               direction='row'
               style={{ marginBottom: '1em' }}>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={7}>
                   <Grid item>
                     <Typography
                       styles={{ width: '100%' }}
@@ -251,7 +239,7 @@ const BusinessImpact = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={5}>
                   <Typography
                     variant='caption'
                     style={{
@@ -273,7 +261,7 @@ const BusinessImpact = () => {
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  $1500.00
                 </Typography>
               </Grid>
             </Grid>
@@ -283,7 +271,7 @@ const BusinessImpact = () => {
               direction='row'
               style={{ marginBottom: '1em' }}>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={8}>
                   <Grid item>
                     <Typography
                       variant='body2'
@@ -297,11 +285,11 @@ const BusinessImpact = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={4}>
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -315,11 +303,11 @@ const BusinessImpact = () => {
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  $1500.00
                 </Typography>
               </Grid>
             </Grid>
@@ -365,7 +353,7 @@ const BusinessImpact = () => {
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  $1500.00
                 </Typography>
               </Grid>
             </Grid>
@@ -374,7 +362,9 @@ const BusinessImpact = () => {
         <Grid item container direction='column' lg>
           <Grid item container direction='row' lg>
             <Grid item>
-              <Typography variant='h5'>Data Quality Index</Typography>
+              <Typography variant='h5' className={classes.heading}>
+                Assigned to me
+              </Typography>
             </Grid>
             <Grid
               item
@@ -399,7 +389,10 @@ const BusinessImpact = () => {
               container
               direction='row'
               style={{ marginBottom: '0.5em' }}>
-              <Grid item container direction='row' lg={9}>
+              <Grid item container direction='row' lg>
+                <Grid item lg={1}>
+                  <TimelineIcon color='primary' />
+                </Grid>
                 <Grid item container direction='column' lg>
                   <Grid item>
                     <Typography
@@ -418,7 +411,7 @@ const BusinessImpact = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -428,15 +421,15 @@ const BusinessImpact = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={2}>
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  Today
                 </Typography>
               </Grid>
             </Grid>
@@ -445,6 +438,9 @@ const BusinessImpact = () => {
               container
               direction='row'
               style={{ marginBottom: '1em' }}>
+              <Grid item lg={1}>
+                <StorageIcon color='primary' />
+              </Grid>
               <Grid item container direction='row' lg={9}>
                 <Grid item container direction='column' lg>
                   <Grid item>
@@ -464,7 +460,7 @@ const BusinessImpact = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -474,15 +470,15 @@ const BusinessImpact = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={2}>
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  Today
                 </Typography>
               </Grid>
             </Grid>
@@ -491,8 +487,11 @@ const BusinessImpact = () => {
               container
               direction='row'
               style={{ marginBottom: '1em' }}>
+              <Grid item lg={1}>
+                <NotificationsActiveIcon color='primary' />
+              </Grid>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={7}>
                   <Grid item>
                     <Typography
                       styles={{ width: '100%' }}
@@ -507,7 +506,7 @@ const BusinessImpact = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={5}>
                   <Typography
                     variant='caption'
                     style={{
@@ -521,7 +520,7 @@ const BusinessImpact = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={2}>
                 <Typography
                   variant='h6'
                   style={{
@@ -529,7 +528,7 @@ const BusinessImpact = () => {
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  Today
                 </Typography>
               </Grid>
             </Grid>
@@ -538,8 +537,11 @@ const BusinessImpact = () => {
               container
               direction='row'
               style={{ marginBottom: '1em' }}>
+              <Grid item lg={1}>
+                <BugReportIcon color='primary' />
+              </Grid>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={8}>
                   <Grid item>
                     <Typography
                       variant='body2'
@@ -553,11 +555,11 @@ const BusinessImpact = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={4}>
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -567,15 +569,15 @@ const BusinessImpact = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={2}>
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  Today
                 </Typography>
               </Grid>
             </Grid>
@@ -584,8 +586,11 @@ const BusinessImpact = () => {
               container
               direction='row'
               style={{ marginBottom: '1em' }}>
+              <Grid item lg={1}>
+                <TimelineIcon color='primary' />
+              </Grid>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={7}>
                   <Grid item>
                     <Typography
                       variant='body2'
@@ -599,7 +604,7 @@ const BusinessImpact = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={5}>
                   <Typography
                     variant='caption'
                     style={{
@@ -613,7 +618,7 @@ const BusinessImpact = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={2}>
                 <Typography
                   variant='h6'
                   style={{
@@ -621,7 +626,7 @@ const BusinessImpact = () => {
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
-                  15000
+                  Today
                 </Typography>
               </Grid>
             </Grid>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import Divider from '@material-ui/core/Divider';
 import {
   LineChart,
   Line,
@@ -78,6 +79,7 @@ const LineGraph = ({ getStatisticData, countries }) => {
         />
         <Line type='monotone' dataKey='uv' stroke='#82ca9d' />
       </LineChart>
+      <Divider />
     </div>
   );
 };

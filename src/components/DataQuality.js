@@ -4,6 +4,7 @@ import { PieChart, Pie, Sector, Cell, Tooltip, Label } from 'recharts';
 
 import { makeStyles } from '@material-ui/styles';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Divider from '@material-ui/core/Divider';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -41,8 +42,15 @@ const renderCustomizedLabel = ({
 };
 
 const useStyles = makeStyles((theme) => ({
+  mainContainer: {
+    marginTop: '1em',
+  },
   subContainer: {
     maxWidth: '50em',
+  },
+  heading: {
+    fontWeight: 'bold',
+    fontSize: 'medium',
   },
 }));
 const DataQuality = () => {
@@ -58,7 +66,9 @@ const DataQuality = () => {
           lg={3}>
           <Grid item container direction='row' lg>
             <Grid item>
-              <Typography variant='h5'>Data Quality Index</Typography>
+              <Typography variant='h5' className={classes.heading}>
+                Data Quality Index
+              </Typography>
             </Grid>
             <Grid
               item
@@ -100,17 +110,11 @@ const DataQuality = () => {
                     <Cell fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
-                <Tooltip />
               </PieChart>
             </Grid>
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          direction='column'
-          //className={classes.subContainer}
-          lg>
+        <Grid item container direction='column' lg>
           <Grid
             item
             container
@@ -118,7 +122,9 @@ const DataQuality = () => {
             style={{ marginBottom: '0.5em' }}
             lg>
             <Grid item>
-              <Typography variant='h5'>Top Errors</Typography>
+              <Typography variant='h5' className={classes.heading}>
+                Top Errors
+              </Typography>
             </Grid>
             <Grid
               item
@@ -149,7 +155,7 @@ const DataQuality = () => {
                     <Typography
                       variant='body2'
                       style={{ fontSize: '0.8em', fontWeight: 'bold' }}>
-                      Premuim less hen zero
+                      Premuim less then zero
                     </Typography>
                   </Grid>
                   <Grid item>
@@ -162,7 +168,7 @@ const DataQuality = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -176,7 +182,7 @@ const DataQuality = () => {
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
@@ -208,7 +214,7 @@ const DataQuality = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -222,7 +228,7 @@ const DataQuality = () => {
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
@@ -236,7 +242,7 @@ const DataQuality = () => {
               direction='row'
               style={{ marginBottom: '1em' }}>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={7}>
                   <Grid item>
                     <Typography
                       styles={{ width: '100%' }}
@@ -251,7 +257,7 @@ const DataQuality = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={5}>
                   <Typography
                     variant='caption'
                     style={{
@@ -283,7 +289,7 @@ const DataQuality = () => {
               direction='row'
               style={{ marginBottom: '1em' }}>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={8}>
                   <Grid item>
                     <Typography
                       variant='body2'
@@ -297,11 +303,11 @@ const DataQuality = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={4}>
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -315,7 +321,7 @@ const DataQuality = () => {
                 <Typography
                   variant='h6'
                   style={{
-                    color: 'red',
+                    color: '#b21313',
                     fontSize: '1em',
                     fontWeight: 'bold',
                   }}>
@@ -374,7 +380,9 @@ const DataQuality = () => {
         <Grid item container direction='column' lg>
           <Grid item container direction='row' lg>
             <Grid item>
-              <Typography variant='h5'>Data Quality Index</Typography>
+              <Typography variant='h5' className={classes.heading}>
+                Assigned to me
+              </Typography>
             </Grid>
             <Grid
               item
@@ -418,7 +426,7 @@ const DataQuality = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -427,17 +435,6 @@ const DataQuality = () => {
                     HIGH
                   </Typography>
                 </Grid>
-              </Grid>
-              <Grid item lg={3}>
-                <Typography
-                  variant='h6'
-                  style={{
-                    color: 'red',
-                    fontSize: '1em',
-                    fontWeight: 'bold',
-                  }}>
-                  15000
-                </Typography>
               </Grid>
             </Grid>
             <Grid
@@ -464,7 +461,7 @@ const DataQuality = () => {
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -474,17 +471,6 @@ const DataQuality = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
-                <Typography
-                  variant='h6'
-                  style={{
-                    color: 'red',
-                    fontSize: '1em',
-                    fontWeight: 'bold',
-                  }}>
-                  15000
-                </Typography>
-              </Grid>
             </Grid>
             <Grid
               item
@@ -492,7 +478,7 @@ const DataQuality = () => {
               direction='row'
               style={{ marginBottom: '1em' }}>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={7}>
                   <Grid item>
                     <Typography
                       styles={{ width: '100%' }}
@@ -507,7 +493,7 @@ const DataQuality = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={4}>
                   <Typography
                     variant='caption'
                     style={{
@@ -521,17 +507,6 @@ const DataQuality = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
-                <Typography
-                  variant='h6'
-                  style={{
-                    color: '#e59a22',
-                    fontSize: '1em',
-                    fontWeight: 'bold',
-                  }}>
-                  15000
-                </Typography>
-              </Grid>
             </Grid>
             <Grid
               item
@@ -539,7 +514,7 @@ const DataQuality = () => {
               direction='row'
               style={{ marginBottom: '1em' }}>
               <Grid item container direction='row' lg={9}>
-                <Grid item container direction='column' lg>
+                <Grid item container direction='column' lg={8}>
                   <Grid item>
                     <Typography
                       variant='body2'
@@ -553,11 +528,11 @@ const DataQuality = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item lg>
+                <Grid item lg={4}>
                   <Typography
                     variant='caption'
                     style={{
-                      backgroundColor: 'red',
+                      backgroundColor: '#b21313',
                       color: 'white',
                       borderRadius: '50em',
                       LineHeight: '2px',
@@ -566,17 +541,6 @@ const DataQuality = () => {
                     HIGH
                   </Typography>
                 </Grid>
-              </Grid>
-              <Grid item lg={3}>
-                <Typography
-                  variant='h6'
-                  style={{
-                    color: 'red',
-                    fontSize: '1em',
-                    fontWeight: 'bold',
-                  }}>
-                  15000
-                </Typography>
               </Grid>
             </Grid>
             <Grid
@@ -613,21 +577,11 @@ const DataQuality = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item lg={3}>
-                <Typography
-                  variant='h6'
-                  style={{
-                    color: '#f2f204',
-                    fontSize: '1em',
-                    fontWeight: 'bold',
-                  }}>
-                  15000
-                </Typography>
-              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
+      <Divider />
     </Fragment>
   );
 };

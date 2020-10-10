@@ -9,25 +9,27 @@ const Statistics = () => {
     <Fragment>
       <Grid container display='row' style={{ marginBottom: '2em' }}>
         <Grid item container lg={4}>
-          <Grid item>
-            <Typography variant='h3'>Data Statistics</Typography>
+          <Grid item style={{ marginLeft: '1.2em' }}>
+            <Typography variant='h4'>Data Statistics</Typography>
           </Grid>
         </Grid>
         <Grid item container display='row' lg={8} style={{ marginTop: '1em' }}>
           <Grid item container display='row' md>
             <Grid item>
-              <BugReportIcon color='primary' />
+              <BugReportIcon style={{ color: '#3cb0ea' }} />
             </Grid>
             <Grid item>
-              <Typography variant='body1'>Incomming Data</Typography>
+              <Typography variant='body1' style={{ color: '#3cb0ea' }}>
+                Incomming Data
+              </Typography>
             </Grid>
           </Grid>
           <Grid item container display='row' md>
             <Grid item>
-              <BugReportIcon color='primary' />
+              <BugReportIcon style={{ color: '#66e1f4' }} />
             </Grid>
             <Grid item>
-              <Typography variant='body1' md>
+              <Typography variant='body1' md style={{ color: '#66e1f4' }}>
                 Error Detected
               </Typography>
             </Grid>
@@ -40,9 +42,14 @@ const Statistics = () => {
               <Typography variant='body1'>Error Fixed</Typography>
             </Grid>
           </Grid>
-          <Grid item container display='row' md>
+          <Grid
+            item
+            container
+            display='row'
+            style={{ marginRight: '0.5em' }}
+            md>
             <Grid item>
-              <BugReportIcon color='primary' />
+              <BugReportIcon />
             </Grid>
             <Grid item>
               <Typography variant='body1'>Error unassigned</Typography>
@@ -50,7 +57,7 @@ const Statistics = () => {
           </Grid>
           <Grid item container display='row' md>
             <Grid item>
-              <BugReportIcon color='primary' />
+              <BugReportIcon />
             </Grid>
             <Grid item>
               <Typography variant='body1'>Error assigned</Typography>
@@ -61,7 +68,7 @@ const Statistics = () => {
               <Typography variant='body1'>This month</Typography>
             </Grid>
             <Grid item>
-              <ExpandMoreIcon color='primary' />
+              <ExpandMoreIcon />
             </Grid>
           </Grid>
         </Grid>
